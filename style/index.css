@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url(../fonts/RobotoMono-Regular.ttf);
+    font-weight: 400;
+}
+
+body {
+    max-width: 1440px;
+    margin: auto;
+    font-family: 'Roboto Mono';
+    text-align: center;
+    position: relative;
+    height: 100vh;
+    text-align: center;
+}
+
+body.light-theme{
+    color: white;
+    background: url('../images/bg.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+
+body.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+.header {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.3rem;
+    position: absolute;
+    z-index: 2;
+}
+
+.header__logo:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: 0.7s;
+}
+
+.header__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+}
+
+.header__list li {
+    text-decoration: none;
+    list-style: none;
+    box-shadow: inset 0 0 0 0 white;
+    color: white;
+    margin: 0 -.25rem;
+    padding: 2px .5rem;
+    transition: color 0.3s ease-in-out, box-shadow .6s ease-in-out;
+}
+
+.header__list li:hover {
+    box-shadow: inset 200px 0 0 0 white;
+    color: #54b3d6;
+    cursor: pointer;
+}
+.header__list li.active{
+    border-bottom: 1px solid white;
+}
+
+.header__burger {
+    color: white;
+}
+
+.header__burger:hover {
+    transform: scale(1.2);
+    transition: 0.7s;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 89vh;
+    width: 100%;
+    flex-direction: column;
+    gap: 24px;
+    position: absolute;
+    left: -120%;
+    top: 0;
+    text-align: center;
+}
+
+.section.active {
+    left: 0;
+    transition: ease-in .5s;
+    
+}
+
+.section li {
+    list-style: none;
+}
+
+.section h1 {
+    font-size: 3rem;
+}
+
+.section li span {
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+
+.home h1{
+    font-size: 3rem;
+}
+.home__information{
+    font-size: 2rem;
+}
+
+
+
+/* CONTACTS */
+
+.section.contacts{
+    font-size: 2rem;
+}
+
+
+
