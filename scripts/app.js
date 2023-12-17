@@ -1,4 +1,4 @@
-const listItems = document.querySelectorAll('.header__list li');
+const listItems = document.querySelectorAll('header li');
 const sections = document.querySelectorAll('.section');
 const logo = document.querySelector('.header__logo');
 
@@ -17,8 +17,8 @@ logo.addEventListener('click', selectSection);
 document.addEventListener('DOMContentLoaded', function () {
     const savedTheme = localStorage.getItem('theme');
     
-    document.body.classList.toggle('dark-theme', savedTheme === 'dark');
-    document.body.classList.toggle('light-theme', savedTheme !== 'dark');
+    // Встановлюємо клас за замовчуванням
+    document.body.classList.add(savedTheme === 'light' ? 'light-theme' : 'dark-theme');
 
     document.addEventListener('click', function (event) {
         if (event.target.id === 'themeToggleBtn') {
@@ -28,15 +28,36 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function toggleTheme() {
-    document.body.classList.toggle('dark-theme');
-    document.body.classList.toggle('light-theme');
     const isDarkTheme = document.body.classList.contains('dark-theme');
-    localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
+    
+    // Виправлення логіки для правильного встановлення теми
+    if (isDarkTheme) {
+        document.body.classList.remove('dark-theme');
+        document.body.classList.add('light-theme');
+        localStorage.setItem('theme', 'light');
+    } else {
+        document.body.classList.remove('light-theme');
+        document.body.classList.add('dark-theme');
+        localStorage.setItem('theme', 'dark');
+    }
 }
 
 
 
+//burger header
+const burgerMenu = document.querySelector('.header__listMobile');
 const burgerButton = document.querySelector('.hamburger');
-burgerButton.addEventListener('click',()=>{
+burgerButton.addEventListener('click', () => {
     burgerButton.classList.toggle('active');
+    burgerMenu.classList.toggle('active');
 })
+
+const burgerItems = document.querySelectorAll('.header__listMobile li');
+
+
+for (const item of burgerItems) {
+    item.addEventListener('click', () => {
+        burgerButton.classList.toggle('active');
+        burgerMenu.classList.toggle('active');
+    })
+}
