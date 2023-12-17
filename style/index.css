@@ -109,7 +109,7 @@ button:hover {
     gap: 24px;
     position: absolute;
     left: 0;
-    top: -100%;
+    top: -120%;
     text-align: center;
 }
 
