@@ -33,3 +33,10 @@ function toggleTheme() {
     const isDarkTheme = document.body.classList.contains('dark-theme');
     localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
 }
+
+
+
+const burgerButton = document.querySelector('.hamburger');
+burgerButton.addEventListener('click',()=>{
+    burgerButton.classList.toggle('active');
+})
