@@ -16,14 +16,14 @@ body {
     font-family: 'Roboto Mono';
     text-align: center;
     position: relative;
-    height: 100vh;
+    height: auto;
     text-align: center;
 }
 
 body.light-theme {
     color: black;
-    background: url('../images/bg.jpg') no-repeat;
-    background-size: 100% 100%;
+    background: url('../images/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 body.dark-theme {
     background-color: #333;
@@ -195,8 +195,13 @@ button:hover {
     height: 100%;
 }
 
+.project__item p{
+    width: 80%;
+}
+
 .project__img {
     height: 100%;
+    border-radius: 50px;
 }
 
 .project__img:hover {
@@ -210,6 +215,11 @@ button:hover {
     max-height: 20%;
     text-align: center;
     padding-left: 24px;
+}
+
+.git__img{
+    width: 70%;
+    height: 70%;
 }
 
 /* contacts */
@@ -287,7 +297,9 @@ button:hover {
         padding-top: 10vh;
     }
     .project__img{
+        margin: auto;
         height: 20vh;
+        width: 70vw;
     }
     .project__desc{
         font-size: 0.8rem;
