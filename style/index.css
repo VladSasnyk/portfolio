@@ -288,6 +288,7 @@ button:hover {
 
     .project__list {
         grid-template-columns: 1fr;
+        gap: 24px;
     }
     .section.projects h1{
         font-size: 1.4rem;
@@ -303,10 +304,20 @@ button:hover {
     }
     .project__desc{
         font-size: 0.8rem;
+        max-height:max-content;
+        gap: 14px;
     }
     .project__item{
-        height: 40vh;
+        height: auto;
     }
+    .project__item p{
+        width: 85%;
+    }
+    .git__img{
+        width: 30px;
+        height: 40px;
+    }
+
     .header__listMobile {
         position: absolute;
         background-color: rgb(87, 79, 79, .9);
