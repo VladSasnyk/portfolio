@@ -100,24 +100,22 @@ button:hover {
     background-color: #2980b9;
 }
 
-.section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 89vh;
-    width: 100%;
-    flex-direction: column;
-    gap: 24px;
+section {
     position: absolute;
-    left: -300%;
-    top: 0%;
-    text-align: center;
+    top: -200vh;
+    height: 70vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    gap: 24px;
 }
-
-.section.active {
-    left: 0;
-    transition: ease-in .6s;
-}
+  
+section.active {
+    top: 5vh;
+    transition: ease-in 0.6s;
+  }
 
 .section li {
     list-style: none;
@@ -152,27 +150,19 @@ button:hover {
 
 /*  about*/
 
-.section.about h1 {
-    font-size: 2rem;
-}
-
-.about__cvs {
-    display: flex;
-    width: 100%;
-    height: 60vh;
-    gap: 24px;
-}
-
-.about__item {
-    width: 100%;
+.about__cvs{
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 2rem;
+}
+.about__info{
+    font-size: 1.3rem;
 }
 
 .about a {
     text-decoration: none;
-    color: white;
+    padding: 15px;
+    color:initial;
 }
 
 
@@ -274,6 +264,9 @@ button:hover {
 
 
 @media screen and (max-width: 498px) {
+    .section.active{
+        top: 1%;
+    }
     .header__list {
         display: none;
     }
@@ -320,7 +313,8 @@ button:hover {
 
     .header__listMobile {
         position: absolute;
-        background-color: rgb(87, 79, 79, .9);
+        background-color: transparent;
+        backdrop-filter: blur(30px);
         width: 100%;
         height: 30vh;
         font-size: 2rem;
