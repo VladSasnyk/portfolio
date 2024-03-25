@@ -13,7 +13,7 @@ const HomePage = () => {
 
     return (<section className="w-full">
         <div className="text-center flex flex-col gap-4 text-5xl">
-            <TypingText text="Hi, i'm Vladyslav Sasnyk" />
+            <TypingText text="Hi, i'm Vladyslav  Sasnyk" />
             <p className="text-black w-max m-auto bg-white text-4xl opacity-0 p-2" id='front-end'>
                 front-end developer
             </p>
