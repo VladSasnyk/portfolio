@@ -23,7 +23,7 @@ const HomePage = () => {
         </div>
 
 
-        <a href="https://drive.google.com/file/d/1zbjXIDRLdzda_sWoH9vvXmbqLSyQqLZS/view" target="_blanc" id='download-cv'>
+        <a href="https://drive.google.com/file/d/1zbjXIDRLdzda_sWoH9vvXmbqLSyQqLZS/view?usp=sharing" target="_blanc" id='download-cv'>
             <button className="border-2 border-white rounded-xl p-2 text-xl hover:text-yellow-100 hover:border-yellow-100 active:text-black active:bg-white">
                 DOWNLOAD CV
             </button>
